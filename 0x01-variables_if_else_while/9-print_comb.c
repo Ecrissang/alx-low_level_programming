@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: print 0-9 using putchar
- *              while using int variable
+ * Description: print 0, 1, - 9
  *
  * Return: Always 0 (Success)
 */
@@ -15,8 +14,14 @@ int main(void)
 
 	while (digit <= 9)
 	{
-		/*convert digit to ASCII representation*/
-		putchar(digit + '0');
+		putchar(digit + 48);
+
+		if (digit != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
 		++digit;
 	}
 	putchar('\n');
